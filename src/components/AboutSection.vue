@@ -37,8 +37,8 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
     <div class="about__container" :class="{ 'about__container--visible': visible }">
       <div class="about__header">
         <span class="about__label">Hakkında</span>
-        <h2 class="about__heading">Ülkü Özcan Kimdir?</h2>
-        <div class="about__heading-line"></div>
+        <h2 class="about__heading">ÜLKÜ ÖZCAN KİMDİR?</h2>
+        <div class="about__heading-rule"></div>
       </div>
 
       <div class="about__body">
@@ -75,7 +75,7 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
 <style scoped>
 .about {
   padding: var(--section-padding) 1.5rem;
-  background: var(--color-bg-warm);
+  background: var(--color-bg-alt);
   position: relative;
 }
 
@@ -87,8 +87,7 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
   transform: translateX(-50%);
   width: 1px;
   height: 60px;
-  background: linear-gradient(to bottom, var(--color-gold), transparent);
-  opacity: 0.4;
+  background: linear-gradient(to bottom, var(--color-divider-strong), transparent);
 }
 
 .about__container {
@@ -116,25 +115,25 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
   font-weight: 400;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-text-muted);
   display: block;
   margin-bottom: 1rem;
 }
 
 .about__heading {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 300;
-  color: var(--color-text);
-  letter-spacing: 0.05em;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 600;
+  color: var(--color-white);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.about__heading-line {
-  width: 50px;
+.about__heading-rule {
+  width: 60px;
   height: 1px;
-  background: var(--color-gold);
+  background: var(--color-divider-strong);
   margin: 1.5rem auto 0;
-  opacity: 0.5;
 }
 
 .about__body {
@@ -185,6 +184,7 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
   text-align: center;
   letter-spacing: 0.1em;
   line-height: 1.6;
+  font-weight: 300;
 }
 
 .about__text-col {
@@ -193,9 +193,9 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
 
 .about__intro {
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 400;
-  line-height: 1.8;
+  line-height: 1.7;
   color: var(--color-text);
   margin-bottom: 2rem;
   font-style: italic;
@@ -206,22 +206,23 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
   color: var(--color-text-muted);
   margin-bottom: 1.2rem;
   line-height: 1.8;
+  font-weight: 300;
 }
 
 .about__quote {
   margin-top: 2.5rem;
   padding: 2rem 2rem 2rem 2.5rem;
-  border-left: 2px solid var(--color-gold);
-  background: var(--color-gold-dim);
-  border-radius: 0 4px 4px 0;
+  border-left: 2px solid var(--color-white);
+  background: var(--color-accent-dim);
+  border-radius: 0 2px 2px 0;
   position: relative;
 }
 
 .about__quote-mark {
   font-family: var(--font-display);
   font-size: 4rem;
-  color: var(--color-gold);
-  opacity: 0.4;
+  color: var(--color-white);
+  opacity: 0.2;
   line-height: 1;
   position: absolute;
   top: 0.5rem;
@@ -229,13 +230,14 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
 }
 
 .about__quote p {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
   font-style: italic;
   line-height: 1.8;
   color: var(--color-text);
   position: relative;
   z-index: 1;
+  font-weight: 300;
 }
 
 @media (max-width: 768px) {

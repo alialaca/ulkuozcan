@@ -29,12 +29,12 @@ onMounted(() => {
     </div>
 
     <div class="hero__content" :class="{ 'hero__content--visible': loaded }">
-      <div class="hero__gold-line"></div>
+      <div class="hero__rule"></div>
       <h1 class="hero__name">ÜLKÜ ÖZCAN</h1>
-      <div class="hero__divider"></div>
-      <p class="hero__title">Danışman Ortak</p>
+      <p class="hero__title">DANIŞMAN ORTAK</p>
+      <div class="hero__pipe"></div>
       <p class="hero__company">KW BORSA</p>
-      <div class="hero__gold-line hero__gold-line--bottom"></div>
+      <div class="hero__rule hero__rule--bottom"></div>
     </div>
 
     <div class="hero__scroll" :class="{ 'hero__scroll--visible': loaded }">
@@ -66,6 +66,7 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: grayscale(100%);
 }
 
 .hero__overlay {
@@ -73,10 +74,10 @@ onMounted(() => {
   inset: 0;
   background:
     linear-gradient(180deg,
-      rgba(15, 15, 15, 0.4) 0%,
-      rgba(15, 15, 15, 0.2) 40%,
-      rgba(15, 15, 15, 0.3) 70%,
-      rgba(15, 15, 15, 0.85) 100%
+      rgba(10, 10, 10, 0.5) 0%,
+      rgba(10, 10, 10, 0.25) 40%,
+      rgba(10, 10, 10, 0.35) 70%,
+      rgba(10, 10, 10, 0.9) 100%
     );
   z-index: 1;
 }
@@ -96,53 +97,53 @@ onMounted(() => {
   transform: translateY(0);
 }
 
-.hero__gold-line {
-  width: 50px;
+.hero__rule {
+  width: 60px;
   height: 1px;
-  background: var(--color-gold);
-  margin: 0 auto 2rem;
-  opacity: 0.7;
+  background: var(--color-white);
+  margin: 0 auto 2.5rem;
+  opacity: 0.4;
 }
 
-.hero__gold-line--bottom {
-  margin: 2rem auto 0;
+.hero__rule--bottom {
+  margin: 2.5rem auto 0;
 }
 
 .hero__name {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 300;
-  letter-spacing: 0.35em;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 600;
+  letter-spacing: 0.2em;
   color: #fff;
-  margin-bottom: 1rem;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-}
-
-.hero__divider {
-  width: 1px;
-  height: 30px;
-  background: var(--color-gold);
-  margin: 0 auto 1rem;
-  opacity: 0.6;
+  margin-bottom: 0.8rem;
+  line-height: 1;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
 }
 
 .hero__title {
   font-family: var(--font-body);
-  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  font-size: clamp(0.8rem, 1.4vw, 0.95rem);
   font-weight: 300;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--color-gold-light);
-  margin-bottom: 0.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.4rem;
+}
+
+.hero__pipe {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0.4rem auto;
 }
 
 .hero__company {
   font-family: var(--font-body);
-  font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+  font-size: clamp(0.7rem, 1.1vw, 0.8rem);
   font-weight: 400;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .hero__scroll {
@@ -165,16 +166,17 @@ onMounted(() => {
 
 .hero__scroll-text {
   font-family: var(--font-body);
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 300;
 }
 
 .hero__scroll-line {
   width: 1px;
   height: 40px;
-  background: linear-gradient(to bottom, var(--color-gold), transparent);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent);
   animation: scrollPulse 2s ease-in-out infinite;
 }
 
@@ -185,11 +187,11 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .hero__name {
-    letter-spacing: 0.2em;
+    letter-spacing: 0.12em;
   }
 
   .hero__title {
-    letter-spacing: 0.15em;
+    letter-spacing: 0.2em;
   }
 }
 </style>

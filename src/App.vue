@@ -14,7 +14,7 @@ import ContactSection from './components/ContactSection.vue'
       <ContactSection />
     </main>
     <footer class="site-footer">
-      <div class="footer-line"></div>
+      <div class="footer-rule"></div>
       <p>&copy; {{ new Date().getFullYear() }} Ülkü Özcan. Tüm hakları saklıdır.</p>
     </footer>
   </div>
@@ -30,18 +30,19 @@ import ContactSection from './components/ContactSection.vue'
 }
 
 :root {
-  --color-bg: #0f0f0f;
-  --color-bg-warm: #1c1917;
-  --color-bg-card: #1a1814;
-  --color-gold: #b8965a;
-  --color-gold-light: #d4b896;
-  --color-gold-dim: rgba(184, 150, 90, 0.15);
-  --color-text: #e8e0d8;
-  --color-text-muted: #9c8f82;
-  --color-divider: rgba(184, 150, 90, 0.25);
+  --color-bg: #0a0a0a;
+  --color-bg-alt: #111111;
+  --color-bg-card: #141414;
+  --color-white: #ffffff;
+  --color-text: #e5e5e5;
+  --color-text-muted: #777777;
+  --color-accent: #ffffff;
+  --color-accent-dim: rgba(255, 255, 255, 0.08);
+  --color-divider: rgba(255, 255, 255, 0.15);
+  --color-divider-strong: rgba(255, 255, 255, 0.3);
 
-  --font-display: 'Cormorant', Georgia, serif;
-  --font-body: 'Figtree', -apple-system, sans-serif;
+  --font-display: 'Barlow Condensed', Impact, sans-serif;
+  --font-body: 'Poppins', -apple-system, sans-serif;
 
   --section-padding: clamp(4rem, 10vw, 8rem);
   --content-width: 1100px;
@@ -64,13 +65,13 @@ body {
 }
 
 a {
-  color: var(--color-gold);
+  color: var(--color-white);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 a:hover {
-  color: var(--color-gold-light);
+  opacity: 0.7;
 }
 
 img {
@@ -78,7 +79,6 @@ img {
   display: block;
 }
 
-/* Reveal animation */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -98,18 +98,18 @@ img {
   text-align: center;
 }
 
-.footer-line {
-  width: 40px;
+.footer-rule {
+  width: 60px;
   height: 1px;
-  background: var(--color-gold);
+  background: var(--color-divider);
   margin: 0 auto 1.5rem;
-  opacity: 0.5;
 }
 
 .site-footer p {
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--color-text-muted);
   letter-spacing: 0.05em;
+  font-weight: 300;
 }
 </style>

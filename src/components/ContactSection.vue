@@ -58,8 +58,8 @@ const contactItems = [
     <div class="contact__container" :class="{ 'contact__container--visible': visible }">
       <div class="contact__header">
         <span class="contact__label">İletişim</span>
-        <h2 class="contact__heading">İletişime Geçin</h2>
-        <div class="contact__heading-line"></div>
+        <h2 class="contact__heading">İLETİŞİME GEÇİN</h2>
+        <div class="contact__heading-rule"></div>
       </div>
 
       <div class="contact__grid">
@@ -104,8 +104,8 @@ const contactItems = [
               <span class="contact__card-value">{{ item.value }}</span>
             </div>
             <svg v-if="item.href" class="contact__card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="7" y1="17" x2="17" y2="7" />
-              <polyline points="7 7 17 7 17 17" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
             </svg>
           </component>
         </template>
@@ -117,7 +117,7 @@ const contactItems = [
 <style scoped>
 .contact {
   padding: var(--section-padding) 1.5rem;
-  background: var(--color-bg-warm);
+  background: var(--color-bg-alt);
   position: relative;
 }
 
@@ -129,8 +129,7 @@ const contactItems = [
   transform: translateX(-50%);
   width: 1px;
   height: 60px;
-  background: linear-gradient(to bottom, var(--color-gold), transparent);
-  opacity: 0.4;
+  background: linear-gradient(to bottom, var(--color-divider-strong), transparent);
 }
 
 .contact__container {
@@ -158,25 +157,24 @@ const contactItems = [
   font-weight: 400;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-text-muted);
   display: block;
   margin-bottom: 1rem;
 }
 
 .contact__heading {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 300;
-  color: var(--color-text);
-  letter-spacing: 0.05em;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 600;
+  color: var(--color-white);
+  letter-spacing: 0.08em;
 }
 
-.contact__heading-line {
-  width: 50px;
+.contact__heading-rule {
+  width: 60px;
   height: 1px;
-  background: var(--color-gold);
+  background: var(--color-divider-strong);
   margin: 1.5rem auto 0;
-  opacity: 0.5;
 }
 
 .contact__grid {
@@ -191,27 +189,27 @@ const contactItems = [
   gap: 1.25rem;
   padding: 1.25rem 1.5rem;
   background: var(--color-bg-card);
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 2px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
   text-decoration: none;
   color: inherit;
 }
 
 .contact__card--link:hover {
-  border-color: var(--color-divider);
-  background: rgba(184, 150, 90, 0.04);
+  border-color: var(--color-divider-strong);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .contact__card-icon {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--color-gold-dim);
+  background: var(--color-accent-dim);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-gold);
+  color: var(--color-white);
   flex-shrink: 0;
 }
 
@@ -224,6 +222,7 @@ const contactItems = [
 }
 
 .contact__card-label {
+  font-family: var(--font-body);
   font-size: 0.7rem;
   font-weight: 400;
   letter-spacing: 0.15em;
@@ -232,20 +231,21 @@ const contactItems = [
 }
 
 .contact__card-value {
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--color-text);
   font-weight: 300;
 }
 
 .contact__card-arrow {
-  color: var(--color-gold);
-  opacity: 0.5;
+  color: var(--color-text-muted);
   flex-shrink: 0;
-  transition: opacity 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .contact__card--link:hover .contact__card-arrow {
-  opacity: 1;
+  color: var(--color-white);
+  transform: translateX(3px);
 }
 
 @media (max-width: 768px) {
