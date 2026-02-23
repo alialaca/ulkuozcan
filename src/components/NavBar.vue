@@ -88,9 +88,6 @@ onUnmounted(() => {
       </button>
     </div>
 
-  </nav>
-
-  <Teleport to="body">
     <Transition name="overlay">
       <div v-if="mobileOpen" class="nav__overlay" @click.self="closeMobile">
         <ul class="nav__mobile-links">
@@ -107,7 +104,7 @@ onUnmounted(() => {
         </ul>
       </div>
     </Transition>
-  </Teleport>
+  </nav>
 </template>
 
 <style scoped>
@@ -124,10 +121,17 @@ onUnmounted(() => {
 }
 
 .nav--scrolled {
+  border-bottom-color: var(--color-divider);
+}
+
+.nav--scrolled::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: rgba(10, 10, 10, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom-color: var(--color-divider);
+  z-index: -1;
 }
 
 .nav__inner {
@@ -252,26 +256,7 @@ onUnmounted(() => {
   transform: translateY(-50%) rotate(-45deg);
 }
 
-/* Overlay transitions handled in global style block below */
-
-/* ---- Responsive ---- */
-@media (max-width: 768px) {
-  .nav__inner {
-    padding: 1rem 1.5rem;
-  }
-
-  .nav__links {
-    display: none;
-  }
-
-  .nav__burger {
-    display: block;
-  }
-}
-</style>
-
-<style>
-/* Mobile overlay — global because Teleport renders outside scoped nav */
+/* ---- Mobile overlay ---- */
 .nav__overlay {
   position: fixed;
   inset: 0;
@@ -304,7 +289,6 @@ onUnmounted(() => {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
   transition: color 0.3s ease;
-  text-decoration: none;
 }
 
 .nav__mobile-link:hover,
@@ -313,6 +297,7 @@ onUnmounted(() => {
   opacity: 1;
 }
 
+/* Overlay transitions */
 .overlay-enter-active {
   transition: opacity 0.35s ease;
 }
@@ -324,5 +309,20 @@ onUnmounted(() => {
 .overlay-enter-from,
 .overlay-leave-to {
   opacity: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .nav__inner {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .nav__burger {
+    display: block;
+  }
 }
 </style>
