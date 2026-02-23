@@ -1,5 +1,47 @@
-# Vue 3 + Vite
+# Ülkü Özcan — Kişisel Web Sitesi
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Ülkü Özcan (Danışman Ortak) için tek sayfalık, kartvizit tarzında kişisel portfolio sitesi.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Teknoloji
+
+- **Vue 3** — Composition API, `<script setup>`
+- **Vite** — Build & dev server
+- **Pure CSS** — Scoped styles, CSS custom properties
+- **Google Fonts** — Barlow Condensed + Poppins
+
+## Kurulum
+
+```bash
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # Production build → dist/
+npm run preview   # Build önizleme
+```
+
+## Proje Yapısı
+
+```
+src/
+├── App.vue                  # Ana uygulama, global stiller
+├── main.js                  # Entry point
+└── components/
+    ├── NavBar.vue           # Navigasyon
+    ├── HeroSection.vue      # Banner video + isim overlay
+    ├── AboutSection.vue     # Biyografi
+    ├── MediaSection.vue     # YouTube/Instagram linkleri
+    └── ContactSection.vue   # İletişim bilgileri
+public/
+└── banner.mp4               # Hero banner videosu
+```
+
+## Tasarım
+
+- Monochrome tema (siyah, beyaz, gri tonları)
+- Scroll-reveal animasyonları (Intersection Observer)
+- Mobil responsive (768px breakpoint)
+
+## Deploy
+
+```bash
+npm run deploy    # CapRover CLI ile deploy
+```
