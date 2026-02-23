@@ -46,7 +46,7 @@ const contactItems = [
   },
   {
     label: 'Adres',
-    value: 'Adres bilgisi yakında eklenecektir',
+    value: 'Oran Mah. Kudüs Cad. One Tower Business Club No: 6/A K:1 Çankaya / ANKARA',
     href: null,
     icon: 'map',
   },
