@@ -52,7 +52,7 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
             </div>
             <div class="about__photo-border"></div>
           </div>
-          <p class="about__photo-caption">Danışman Ortak<br />KW BORSA</p>
+          <p class="about__photo-caption">Danışman Ortak</p>
         </div>
 
         <div class="about__text-col">

@@ -32,8 +32,6 @@ onMounted(() => {
       <div class="hero__rule"></div>
       <h1 class="hero__name"><span class="hero__name-first">ÜLKÜ</span> <span class="hero__name-last">ÖZCAN</span></h1>
       <p class="hero__title">DANIŞMAN ORTAK</p>
-      <div class="hero__pipe"></div>
-      <p class="hero__company">KW BORSA</p>
       <div class="hero__rule hero__rule--bottom"></div>
     </div>
 
@@ -111,10 +109,10 @@ onMounted(() => {
 
 .hero__name {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 8vw, 6rem);
-  letter-spacing: -1.8px;
+  font-size: clamp(2.8rem, 7vw, 84px);
+  letter-spacing: -0.5px;
   color: #fff;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.3rem;
   line-height: 1;
   text-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
 }
@@ -129,28 +127,12 @@ onMounted(() => {
 
 .hero__title {
   font-family: var(--font-body);
-  font-size: clamp(0.8rem, 1.4vw, 0.95rem);
-  font-weight: 300;
+  font-size: clamp(0.9rem, 1.8vw, 28px);
+  font-weight: 500;
   letter-spacing: 0.6px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 0.4rem;
-}
-
-.hero__pipe {
-  width: 1px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.3);
-  margin: 0.4rem auto;
-}
-
-.hero__company {
-  font-family: var(--font-body);
-  font-size: clamp(0.7rem, 1.1vw, 0.8rem);
-  font-weight: 400;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
 }
 
 .hero__scroll {
@@ -194,7 +176,7 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .hero__name {
-    letter-spacing: -1.8px;
+    letter-spacing: -0.5px;
   }
 
   .hero__title {
