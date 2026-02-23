@@ -1,4 +1,5 @@
 <script setup>
+import NavBar from './components/NavBar.vue'
 import HeroSection from './components/HeroSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import MediaSection from './components/MediaSection.vue'
@@ -7,6 +8,7 @@ import ContactSection from './components/ContactSection.vue'
 
 <template>
   <div class="app">
+    <NavBar />
     <HeroSection />
     <main>
       <AboutSection />
