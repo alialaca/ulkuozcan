@@ -140,7 +140,7 @@ onUnmounted(() => {
 .nav__logo {
   font-family: var(--font-display);
   font-size: 1.3rem;
-  letter-spacing: 0.12em;
+  letter-spacing: -0.5px;
   color: var(--color-white);
   line-height: 1;
   opacity: 1;
