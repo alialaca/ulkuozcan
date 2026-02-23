@@ -139,7 +139,7 @@ onUnmounted(() => {
 /* ---- Logo ---- */
 .nav__logo {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   letter-spacing: 0.12em;
   color: var(--color-white);
   line-height: 1;
@@ -169,9 +169,9 @@ onUnmounted(() => {
 
 .nav__link {
   font-family: var(--font-body);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 300;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.55);
   position: relative;
@@ -276,7 +276,7 @@ onUnmounted(() => {
 
 .nav__mobile-link {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
