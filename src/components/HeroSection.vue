@@ -30,7 +30,7 @@ onMounted(() => {
 
     <div class="hero__content" :class="{ 'hero__content--visible': loaded }">
       <div class="hero__rule"></div>
-      <h1 class="hero__name">ÜLKÜ ÖZCAN</h1>
+      <h1 class="hero__name"><span class="hero__name-first">ÜLKÜ</span> <span class="hero__name-last">ÖZCAN</span></h1>
       <p class="hero__title">DANIŞMAN ORTAK</p>
       <div class="hero__pipe"></div>
       <p class="hero__company">KW BORSA</p>
@@ -112,19 +112,26 @@ onMounted(() => {
 .hero__name {
   font-family: var(--font-display);
   font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: -1.8px;
   color: #fff;
   margin-bottom: 0.8rem;
   line-height: 1;
   text-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
 }
 
+.hero__name-first {
+  font-weight: 500;
+}
+
+.hero__name-last {
+  font-weight: 300;
+}
+
 .hero__title {
   font-family: var(--font-body);
   font-size: clamp(0.8rem, 1.4vw, 0.95rem);
   font-weight: 300;
-  letter-spacing: 0.35em;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 0.4rem;
@@ -187,11 +194,11 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .hero__name {
-    letter-spacing: 0.12em;
+    letter-spacing: -1.8px;
   }
 
   .hero__title {
-    letter-spacing: 0.2em;
+    letter-spacing: 0.6px;
   }
 }
 </style>
