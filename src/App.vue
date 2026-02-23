@@ -16,8 +16,13 @@ import ContactSection from './components/ContactSection.vue'
       <ContactSection />
     </main>
     <footer class="site-footer">
-      <div class="footer-rule"></div>
-      <p>&copy; {{ new Date().getFullYear() }} Ülkü Özcan. Tüm hakları saklıdır.</p>
+      <div class="footer-inner">
+        <p>&copy; {{ new Date().getFullYear() }} Ülkü Özcan</p>
+        <span class="footer-pipe">|</span>
+        <a href="https://www.sifiryirmiiki.com/" target="_blank" rel="noopener noreferrer" class="footer-agency">
+          <img src="/022-logo.svg" alt="sıfır yirmi iki" class="footer-agency-logo" />
+        </a>
+      </div>
     </footer>
   </div>
 </template>
@@ -96,22 +101,45 @@ img {
 
 <style scoped>
 .site-footer {
-  padding: 2rem 1.5rem 3rem;
-  text-align: center;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.footer-rule {
-  width: 60px;
-  height: 1px;
-  background: var(--color-divider);
-  margin: 0 auto 1.5rem;
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
 }
 
 .site-footer p {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: var(--color-text-muted);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   font-weight: 300;
+}
+
+.footer-pipe {
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 0.85rem;
+  font-weight: 200;
+  user-select: none;
+}
+
+.footer-agency {
+  display: flex;
+  align-items: center;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.footer-agency:hover {
+  opacity: 0.7;
+}
+
+.footer-agency-logo {
+  height: 20px;
+  width: auto;
 }
 </style>
