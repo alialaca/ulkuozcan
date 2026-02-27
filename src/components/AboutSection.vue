@@ -44,12 +44,11 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
       <div class="about__body">
         <div class="about__photo-col">
           <div class="about__photo-frame">
-            <div class="about__photo-placeholder">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                <circle cx="12" cy="7" r="4" />
-              </svg>
-            </div>
+            <img
+              src="/ulkuozcan.jpg"
+              alt="Ülkü Özcan"
+              class="about__photo-img"
+            />
             <div class="about__photo-border"></div>
           </div>
           <p class="about__photo-caption">Danışman Ortak</p>
@@ -159,15 +158,12 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
   margin-bottom: 1.5rem;
 }
 
-.about__photo-placeholder {
+.about__photo-img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: var(--color-bg-card);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-muted);
+  object-fit: cover;
+  filter: grayscale(100%);
 }
 
 .about__photo-border {
