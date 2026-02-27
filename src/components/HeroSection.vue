@@ -126,9 +126,9 @@ onMounted(() => {
 }
 
 .hero__title {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-size: clamp(0.9rem, 1.8vw, 28px);
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.6px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.8);
