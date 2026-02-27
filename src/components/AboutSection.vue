@@ -51,7 +51,6 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
             />
             <div class="about__photo-border"></div>
           </div>
-          <p class="about__photo-caption">Danışman Ortak</p>
         </div>
 
         <div class="about__text-col">
@@ -147,7 +146,7 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
   flex-direction: column;
   align-items: center;
   position: sticky;
-  top: 2rem;
+  top: 5rem;
 }
 
 .about__photo-frame {
@@ -155,7 +154,7 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 
 .about__photo-img {
@@ -171,16 +170,6 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
   inset: -6px;
   border-radius: 50%;
   border: 1px solid var(--color-divider);
-}
-
-.about__photo-caption {
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-  text-align: center;
-  letter-spacing: 0.1em;
-  line-height: 1.6;
-  font-weight: 300;
 }
 
 .about__text-col {
