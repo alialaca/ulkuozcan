@@ -51,6 +51,9 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
             />
             <div class="about__photo-border"></div>
           </div>
+          <div class="about__affiliation">
+            <img src="/kw-logo.png" alt="KW Borsa" class="about__affiliation-logo" />
+          </div>
         </div>
 
         <div class="about__text-col">
@@ -225,6 +228,16 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
   font-weight: 300;
 }
 
+.about__affiliation {
+  margin-top: 1.5rem;
+  opacity: 0.4;
+}
+
+.about__affiliation-logo {
+  width: 120px;
+  height: auto;
+}
+
 @media (max-width: 768px) {
   .about__body {
     grid-template-columns: 1fr;
@@ -238,6 +251,10 @@ const bioQuote = '\'Herkesin bir gayrimenkul danışmanı olmalı\' fikrinden ha
   .about__photo-frame {
     width: 160px;
     height: 160px;
+  }
+
+  .about__affiliation-logo {
+    width: 100px;
   }
 
   .about__quote {
