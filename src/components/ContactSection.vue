@@ -45,6 +45,12 @@ const contactItems = [
     external: true,
   },
   {
+    label: 'Proje Ofisi',
+    value: 'Beytepe Mah. Kanuni Sultan Süleyman Blv. Kentform İş Merkezi No:18 AA Çankaya / ANKARA',
+    href: null,
+    icon: 'building',
+  },
+  {
     label: 'Adres',
     value: 'Oran Mah. Kudüs Cad. One Tower Business Club No: 6/A K:1 Çankaya / ANKARA',
     href: null,
@@ -92,6 +98,20 @@ const contactItems = [
               <svg v-if="item.icon === 'youtube'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
                 <path d="m10 15 5-3-5-3z" />
+              </svg>
+              <!-- Building -->
+              <svg v-if="item.icon === 'building'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
+                <path d="M9 22v-4h6v4" />
+                <path d="M8 6h.01" />
+                <path d="M16 6h.01" />
+                <path d="M12 6h.01" />
+                <path d="M12 10h.01" />
+                <path d="M12 14h.01" />
+                <path d="M16 10h.01" />
+                <path d="M16 14h.01" />
+                <path d="M8 10h.01" />
+                <path d="M8 14h.01" />
               </svg>
               <!-- Map -->
               <svg v-if="item.icon === 'map'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
